@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body class="bg-[#f4f5f7] h-[100vh]">
-   <nav class="max-w-lg mx-auto border-b-1 border-b-gray-400 p-3">
+   <nav class="max-w-lg mx-auto border-b-1 border-b-gray-400 p-3 bg-white">
     <div class="min-h-[50px] flex justify-between items-center">
         <div class="flex items-center">
             <img class="h-[50px]" src="./assets/Group.png" alt="">
@@ -28,45 +28,81 @@
         </div>
     </div>
    </nav>
-   <main class="max-w-lg mx-auto mt-8 p-3">
-    <div>
+   <main class=" ">
+   <section class="bg-white max-w-lg mx-auto  p-3 rounded-b-2xl ">
+     <div class="">
         <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
         <p class="text-[#08080880]"">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
     </div>
 
-    <div class="border-2 border-amber-500 min-h-[200px] mt-5">
-        <div class="border-2 border-green-500 text-center p-3">
+    <div class=" min-h-[200px] mt-5 mb-5 grid grid-cols-3 max-w-lg mx-auto gap-4">
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/wallet1.png" alt="" class="mx-auto">
-            <h2 class="">Add Money</h2>
+            <h2 class="text-[#080808b3] text-sm mt-2">Add Money</h2>
 
         </div>
-        <div class="border-2 border-green-500 text-center p-3">
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/send1.png" alt="" class="mx-auto">
-            <h2 class="">Cashout</h2>
+            <h2 class="text-[#080808b3] text-sm mt-2">Cashout</h2>
 
         </div>
-        <div class="border-2 border-green-500 text-center p-3">
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/money1.png" alt="" class="mx-auto">
-            <h2 class="">Transfer Money</h2>
+            <h2 class="text-[#080808b3] text-sm mt-2">Transfer Money</h2>
 
         </div>
-        <div class="border-2 border-green-500 text-center p-3">
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/bonus1.png" alt="" class="mx-auto">
-            <h2 class="">Get Bonus</h2>
+            <h2 class="text-[#080808b3] text-sm mt-2">Get Bonus</h2>
 
         </div>
-        <div class="border-2 border-green-500 text-center p-3">
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/purse1.png" alt="" class="mx-auto">
-            <h2 class="">Pay Bill</h2>
+            <h2 class="text-[#080808b3] text-sm mt-2">Pay Bill</h2>
 
         </div>
-        <div class="border-2 border-green-500 text-center p-3">
+        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/transaction1.png" alt="" class="mx-auto">
-            <h2 class="">Transactions</h2>
+            <h2 class="text-[#080808b3] text-sm mt-2">Transactions</h2>
 
         </div>
         
     </div>
+   </section>
+   <section class="all-form-sections max-w-lg mx-auto  p-3 rounded-b-2xl">
+    <!-- add money -->
+     <div>
+        <h1 class="text-xl my-5 font-bold">Add Money</h1>
+        <form class="mx-auto bg-white rounded-2xl p-3">
+            <div class="mx-auto mb-3">
+                <h1 class="font-semibold">Select a bank</h1>
+                <select class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+                <option>Select Bank</option>
+                <option>AB Bank</option>
+                <option>IFIC Bank</option>
+                <option>Dutch Bangla Bank</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="font-semibold" for="">Bank Account Number</label>
+            <br>
+            <input  type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+            </div>
+            <div class="mb-3">
+                <label class="font-semibold" for="">Amount to Add</label>
+            <br>
+            <input  type="text" placeholder="Add Amount to withdraw" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+            </div>
+            <div class="mb-3">
+                <label class="font-semibold" for="">Pin Number</label>
+            <br>
+            <input  type="text" placeholder="Enter 4 digit pin number " class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+            </div>
+            <button class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Add Money</button>
+        </form>
+     </div>
+
+   </section>
    </main>
 </body>
 </html>
