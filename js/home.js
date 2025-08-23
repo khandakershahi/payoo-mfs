@@ -1,16 +1,46 @@
 const validPin = 1234;
+
+// functions to get input values
+function getInputValueNumber(id){
+  const inputField =  document.getElementById(id);
+  const inputFieldValue = inputField.value;
+  const inputFieldValueNumber = parseInt(inputFieldValue);
+  return inputFieldValueNumber;
+}
+
+function getInputValue(id){
+    const inputField =  document.getElementById(id);
+   const inputFieldValue = inputField.value;
+   return inputFieldValue;
+}
+// functions to get inner text
+function getInnerText(id){
+    const element = document.getElementById(id);
+    const elementValue = element.innerText;
+    const elementValueNumber = parseInt(elementValue);
+    return elementValueNumber;
+}
+
+// function to set inner text
+function setInnerText(value){
+    const availableBalancElement = document.getElementById('available-balance');
+    availableBalancElement.innerText = value;
+}
+
+
 // add-money feature
 document.getElementById('add-money-btn').addEventListener('click', function(e){
 e.preventDefault();
 
-const bank = document.getElementById('bank').value;
-const accountNumber = document.getElementById('account-number').value;
-const amount = parseInt(document.getElementById('add-amount').value);
+const bank = getInputValue('bank');
+const accountNumber = getInputValue('account-number');
 
-const pin = parseInt(document.getElementById('add-pin').value);
+const amount = getInputValueNumber("add-amount");
+
+const pin = getInputValueNumber('add-pin');
 
 
-const availableBalance = parseInt(document.getElementById('available-balance').innerText);
+const availableBalance = getInnerText('available-balance');
 
 if(accountNumber.length < 11){
     alert('Please provide valid account number');
@@ -24,7 +54,7 @@ if(pin !== validPin){
 
 const TotalNewAvialableBalance = amount + availableBalance;
 
-document.getElementById('available-balance').innerText = TotalNewAvialableBalance;
+setInnerText(TotalNewAvialableBalance);
 })
 
 
@@ -32,12 +62,13 @@ document.getElementById('available-balance').innerText = TotalNewAvialableBalanc
 
 document.getElementById('withdraw-btn').addEventListener('click', function(e){
     e.preventDefault();
-   const amount = parseInt(document.getElementById('withdraw-amount').value);
-   const availableBalance = parseInt(document.getElementById('available-balance').innerText);
+   const amount = getInputValueNumber('withdraw-amount')
+   const availableBalance = getInnerText('available-balance');
+
 
    TotalNewAvialableBalance = availableBalance - amount;
   
-    document.getElementById('available-balance').innerText = TotalNewAvialableBalance;
+   setInnerText(TotalNewAvialableBalance);
 })
 
 
