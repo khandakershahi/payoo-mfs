@@ -24,7 +24,7 @@
             </div>
         </div>
         <div>
-            <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"></i>Logout</button>
+            <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"></i>Log out</button>
         </div>
     </div>
    </nav>
@@ -36,12 +36,12 @@
     </div>
 
     <div class=" min-h-[200px] mt-5 mb-5 grid grid-cols-3 max-w-lg mx-auto gap-4">
-        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
+        <div id="add-money-button" class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/wallet1.png" alt="" class="mx-auto">
             <h2 class="text-[#080808b3] text-sm mt-2">Add Money</h2>
 
         </div>
-        <div class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
+        <div id="cash-out-button" class="border-2 border-[#0808081a] text-center p-3 rounded-xl">
             <img src="./assets/send1.png" alt="" class="mx-auto">
             <h2 class="text-[#080808b3] text-sm mt-2">Cashout</h2>
 
@@ -71,7 +71,7 @@
    </section>
    <section class="all-form-sections max-w-lg mx-auto  p-3 rounded-b-2xl">
     <!-- add money -->
-     <div>
+     <div id="add-money-parent">
         <h1 class="text-xl my-5 font-bold">Add Money</h1>
         <form class="mx-auto bg-white rounded-2xl p-3">
             <div class="mx-auto mb-3">
@@ -102,6 +102,29 @@
         </form>
      </div>
 
+     <!-- cash out form  -->
+     <div id="cash-out-parent" style="display: none;"">
+                <h1 class="text-xl my-5 font-bold">Cash Out</h1>
+        <form class="mx-auto bg-white rounded-2xl p-3">
+            
+            <div class="mb-3">
+                <label class="font-semibold" for="">Agent Number</label>
+            <br>
+            <input  type="text" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+            </div>
+            <div class="mb-3">
+                <label class="font-semibold" for="">Amount</label>
+            <br>
+            <input id="withdraw-amount"  type="text" placeholder="Enter Amount to withdraw" class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+            </div>
+            <div class="mb-3">
+                <label class="font-semibold" for="">Pin Number</label>
+            <br>
+            <input  type="text" placeholder="Enter 4 digit pin number " class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+            </div>
+            <button id="withdraw-btn" class="btn bg-[#0874F2] mt-5 w-full rounded-3xl text-white">Withdraw Money</button>
+        </form>
+     </div>
    </section>
    </main>
    <script src="./js/home.js"></script>
